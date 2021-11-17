@@ -2,7 +2,7 @@ const router = require("express").Router();
 const storage = require("../db/storage");
 
 router.get("/notes", (req, res) => {
-  store
+  storage
     .getNotes()
     .then((notes) => {
       return res.json(notes);
